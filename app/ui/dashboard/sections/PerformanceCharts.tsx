@@ -28,6 +28,37 @@ export function PerformanceCharts({
   const showRamon = visibleCoaches.includes("ramon");
   const showDorival = visibleCoaches.includes("dorival");
 
+  const renderMatchTooltip = (
+    payload?: ReadonlyArray<{ payload?: unknown }> | null,
+  ) => {
+    const row = payload?.[0]?.payload;
+    if (!row || typeof row !== "object") return null;
+
+    const d = row as TimelineDatum;
+
+    return (
+      <div className="max-w-72 rounded-2xl border border-zinc-700 bg-zinc-950 p-3 shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-400">
+          Jogo {d.label} • {d.date}
+        </p>
+        <p className="mt-1.5 text-sm font-bold leading-snug text-zinc-100">
+          Corinthians x {d.adversario}
+        </p>
+
+        <div className="mt-2.5 grid grid-cols-[auto_1fr] items-start gap-x-2 gap-y-1.5 text-xs">
+          <span className="text-zinc-400">Placar</span>
+          <span className="font-mono font-semibold text-zinc-100">{d.score}</span>
+
+          <span className="text-zinc-400">Competição</span>
+          <span className="text-zinc-200">{d.competicao}</span>
+
+          <span className="text-zinc-400">Local</span>
+          <span className="text-zinc-200">{d.location}</span>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <Section
       eyebrow="Desempenho ao longo do tempo"
@@ -42,7 +73,7 @@ export function PerformanceCharts({
       >
         {showRamon ? (
           <ChartContainer
-            title="Linha de confrontos: Ramon Diaz"
+            title="Linha de confrontos: Ramón Diaz"
             subtitle="Passe o mouse para ver adversário e placar."
             className="xl:h-full"
           >
@@ -52,15 +83,7 @@ export function PerformanceCharts({
               lines={[{ dataKey: "pontuacao", name: "Jogo", color: "#f4f4f5" }]}
               height={155}
               customTooltip={({ payload }) => {
-                if (!payload || !payload[0]) return null;
-                const d = payload[0].payload;
-                return (
-                  <div className="p-2">
-                    <div className="font-bold">Corinthians x {d.adversario}</div>
-                    <div>Placar: <span className="font-mono">{d.score}</span></div>
-                    <div className="text-xs text-zinc-400">{d.competicao} - {d.date}</div>
-                  </div>
-                );
+                return renderMatchTooltip(payload);
               }}
             />
           </ChartContainer>
@@ -68,7 +91,7 @@ export function PerformanceCharts({
 
         {showDorival ? (
           <ChartContainer
-            title="Linha de forma: Dorival Junior"
+            title="Linha de confrontos: Dorival Júnior"
             subtitle="Passe o mouse para ver adversário e placar."
             className="xl:h-full"
           >
@@ -78,15 +101,7 @@ export function PerformanceCharts({
               lines={[{ dataKey: "pontuacao", name: "Jogo", color: "#eab308" }]}
               height={155}
               customTooltip={({ payload }) => {
-                if (!payload || !payload[0]) return null;
-                const d = payload[0].payload;
-                return (
-                  <div className="p-2">
-                    <div className="font-bold">Corinthians x {d.adversario}</div>
-                    <div>Placar: <span className="font-mono">{d.score}</span></div>
-                    <div className="text-xs text-zinc-400">{d.competicao} - {d.date}</div>
-                  </div>
-                );
+                return renderMatchTooltip(payload);
               }}
             />
           </ChartContainer>
@@ -102,7 +117,7 @@ export function PerformanceCharts({
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.24em] text-zinc-400">
-                  Ultimo recorte
+                  Último recorte
                 </p>
                 <h3 className="mt-1.5 text-lg font-black uppercase tracking-[0.08em] text-white">
                   {highlight.coach}

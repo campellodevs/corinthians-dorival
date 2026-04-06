@@ -32,11 +32,11 @@ export function TeamComparison({
       title={
         compareMode
           ? "Comparativo entre técnicos"
-          : `Raio-x de ${focusCoach === "dorival" ? "Dorival Junior" : "Ramon Diaz"}`
+          : `Raio-x de ${focusCoach === "dorival" ? "Dorival Júnior" : "Ramón Diaz"}`
       }
       description={
         compareMode
-          ? "Dorival permanece como foco visual, enquanto Ramon entra como camada de referência para contraste de desempenho."
+          ? "Dorival permanece como foco visual, enquanto Ramón entra como camada de referência para contraste de desempenho."
           : "KPIs centrais do técnico selecionado com distribuição de resultados e leitura enxuta para caber inteira na tela."
       }
       className="xl:flex xl:h-full xl:min-h-0 xl:flex-col"
@@ -55,7 +55,7 @@ export function TeamComparison({
                       : "border-yellow-500/30 bg-yellow-500/10 text-yellow-300"
                   }`}
                 >
-                  {isRamon ? "Ramon" : "Dorival"}
+                  {isRamon ? "Ramón" : "Dorival"}
                 </div>
                 <div className="grid flex-1 grid-cols-2 gap-2 sm:grid-cols-4">
                   {coachSummary.cards.slice(0, 4).map((card, index) => (
@@ -64,7 +64,7 @@ export function TeamComparison({
                       label={card.label}
                       value={card.value}
                       helper={card.helper}
-                      tone={index === 1 ? (isRamon ? "neutral" : "accent") : "neutral"}
+                      tone={isRamon ? (index === 1 ? "neutral" : "neutral") : "dorival"}
                     />
                   ))}
                 </div>
@@ -100,8 +100,8 @@ export function TeamComparison({
             data={comparisonMetrics}
             xKey="metric"
             bars={[
-              { dataKey: "ramon", name: "Ramon Diaz", color: "#f4f4f5" },
-              { dataKey: "dorival", name: "Dorival Junior", color: "#eab308" },
+              { dataKey: "ramon", name: "Ramón Diaz", color: "#f4f4f5" },
+              { dataKey: "dorival", name: "Dorival Júnior", color: "#eab308" },
             ]}
             height={compareMode ? 430 : 185}
             valueFormatter={(value) => `${value.toFixed(1)}`}

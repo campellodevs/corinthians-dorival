@@ -91,29 +91,35 @@ export function DashboardContainer({
                 </h1>
                 <p className="max-w-3xl text-sm leading-5 text-zinc-300 xl:max-w-[760px]">
                   {compareMode
-                    ? "Dorival permanece como referencia principal e Ramon entra como camada comparativa quando selecionado."
+                    ? "Modo comparativo ativo: os indicadores individuais dos dois tecnicos aparecem no bloco abaixo para leitura lado a lado."
                     : summary.shortName === "Dorival"
-                      ? "Foco total no recorte 2026: producao ofensiva, resultado por jogo e impacto do elenco."
-                      : "Leitura isolada do ciclo de Ramon Diaz com KPIs de time e tendencia de resultados."}
+                      ? "Foco total no recorte 2026: produção ofensiva, resultado por jogo e impacto do elenco."
+                      : "Leitura isolada do ciclo de Ramón Diaz com KPIs de time e tendência de resultados."}
                 </p>
               </div>
 
-              <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-4">
-                {heroCards.map((card) => (
-                  <div
-                    key={card.label}
-                    className="rounded-2xl border border-zinc-800 bg-black/35 p-3.5 backdrop-blur-sm"
-                  >
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-zinc-400">
-                      {card.label}
-                    </p>
-                    <p className="mt-1.5 text-[1.9rem] font-black leading-none text-white">
-                      {card.value}
-                    </p>
-                    <p className="mt-1 text-xs leading-5 text-zinc-400">{card.helper}</p>
-                  </div>
-                ))}
-              </div>
+              {compareMode ? (
+                <div className="rounded-2xl border border-yellow-500/25 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-100">
+                  Comparação completa ativa: veja os cards de Ramón e Dorival no bloco "Comparação do time".
+                </div>
+              ) : (
+                <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-4">
+                  {heroCards.map((card) => (
+                    <div
+                      key={card.label}
+                      className="rounded-2xl border border-zinc-800 bg-black/35 p-3.5 backdrop-blur-sm"
+                    >
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-zinc-400">
+                        {card.label}
+                      </p>
+                      <p className="mt-1.5 text-[1.9rem] font-black leading-none text-white">
+                        {card.value}
+                      </p>
+                      <p className="mt-1 text-xs leading-5 text-zinc-400">{card.helper}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="relative hidden overflow-hidden rounded-[26px] border border-zinc-800 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.42))] lg:block">
@@ -149,7 +155,7 @@ export function DashboardContainer({
                 >
                   <Image
                     src="/ramonbg.png"
-                    alt="Ramon Diaz"
+                    alt="Ramón Diaz"
                     width={320}
                     height={420}
                     className="h-[220px] w-auto object-contain drop-shadow-[0_0_26px_rgba(234,179,8,0.45)] xl:h-[245px]"
