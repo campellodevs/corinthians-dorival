@@ -1,0 +1,48 @@
+match_id,data,adversario,casa,placar_corinthians,placar_adversario,competicao,tecnico
+1,2025-04-16,Fluminense,home,0,2,Brasileirao,Ramon Diaz
+2,2025-04-12,Palmeiras,away,0,2,Brasileirao,Ramon Diaz
+3,2025-04-08,America de Cali,away,1,1,Sulamericana,Ramon Diaz
+4,2025-04-05,Vasco da Gama,home,3,0,Brasileirao,Ramon Diaz
+5,2025-04-02,Huracan,home,1,2,Sulamericana,Ramon Diaz
+6,2025-03-30,Bahia,away,1,1,Brasileirao,Ramon Diaz
+7,2025-03-27,Palmeiras,home,0,0,Paulista,Ramon Diaz
+8,2025-03-16,Palmeiras,away,1,0,Paulista,Ramon Diaz
+9,2025-03-12,Barcelona SC,home,2,0,Libertadores,Ramon Diaz
+10,2025-03-09,Santos,home,2,1,Paulista,Ramon Diaz
+11,2025-03-05,Barcelona SC,away,0,3,Libertadores,Ramon Diaz
+12,2025-03-02,Mirassol,home,2,0,Paulista,Ramon Diaz
+13,2025-02-26,Universidad Central,home,3,2,Libertadores,Ramon Diaz
+14,2025-02-23,Guarani,home,2,2,Paulista,Ramon Diaz
+15,2025-02-19,Universidad Central,away,1,1,Libertadores,Ramon Diaz
+16,2025-02-15,Portuguesa,away,2,2,Paulista,Ramon Diaz
+17,2025-02-12,Santos,home,2,1,Paulista,Ramon Diaz
+18,2025-02-09,Sao Bernardo,home,2,0,Paulista,Ramon Diaz
+19,2025-02-06,Palmeiras,away,1,1,Paulista,Ramon Diaz
+20,2025-02-03,Novorizontino,away,1,0,Paulista,Ramon Diaz
+21,2025-02-01,EC Noroeste,home,2,1,Paulista,Ramon Diaz
+22,2025-01-29,Ponte Preta,away,1,0,Paulista,Ramon Diaz
+23,2025-01-26,Sao Paulo,away,1,3,Paulista,Ramon Diaz
+24,2025-01-22,Agua Santa,home,2,1,Paulista,Ramon Diaz
+25,2025-01-19,AE Velo Clube,home,2,1,Paulista,Ramon Diaz
+26,2025-01-16,Red Bull Bragantino,away,2,1,Paulista,Ramon Diaz
+27,2024-12-08,Gremio,away,3,0,Brasileirao,Ramon Diaz
+28,2024-12-03,Bahia,home,3,0,Brasileirao,Ramon Diaz
+29,2024-11-30,Criciuma,away,4,2,Brasileirao,Ramon Diaz
+30,2024-11-24,Vasco da Gama,home,3,1,Brasileirao,Ramon Diaz
+31,2024-11-20,Cruzeiro,home,2,1,Brasileirao,Ramon Diaz
+32,2024-11-09,Vitoria,away,2,1,Brasileirao,Ramon Diaz
+33,2024-11-04,Palmeiras,home,2,0,Brasileirao,Ramon Diaz
+34,2024-10-31,Racing Club,away,1,2,Sulamericana,Ramon Diaz
+35,2024-10-28,Cuiaba,away,1,0,Brasileirao,Ramon Diaz
+36,2024-10-24,Racing Club,home,2,2,Sulamericana,Ramon Diaz
+37,2024-10-20,Flamengo,home,0,0,Copa do Brasil,Ramon Diaz
+38,2024-10-17,Athletico Paranaense,home,5,2,Brasileirao,Ramon Diaz
+39,2024-10-05,Internacional,home,2,2,Brasileirao,Ramon Diaz
+40,2024-10-02,Flamengo,away,0,1,Copa do Brasil,Ramon Diaz
+41,2024-09-29,Sao Paulo,away,1,3,Brasileirao,Ramon Diaz
+42,2024-09-24,Fortaleza,home,3,0,Sulamericana,Ramon Diaz
+43,2024-09-21,Atletico Goianiense,home,3,0,Brasileirao,Ramon Diaz
+44,2024-09-17,Fortaleza,away,2,0,Sulamericana,Ramon Diaz
+45,2024-09-14,Botafogo,away,1,2,Brasileirao,Ramon Diaz
+46,2024-09-11,Juventude,home,3,1,Copa do Brasil,Ramon Diaz
+47,2024-09-01,Flamengo,home,2,1,Brasileirao,Ramon Diaz
