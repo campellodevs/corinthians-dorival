@@ -32,6 +32,9 @@
     "baseline-browser-mapping": "^2.10.16"
   },
   "pnpm": {
+    "overrides": {
+      "baseline-browser-mapping": "^2.10.16"
+    },
     "onlyBuiltDependencies": [
       "bcrypt",
       "sharp"
