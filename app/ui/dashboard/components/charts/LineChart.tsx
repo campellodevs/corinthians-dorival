@@ -10,8 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import type { FC } from "react";
-import type { TooltipContentProps } from "recharts";
+import type { ReactNode } from "react";
 import type { ChartDatum } from "../../types/dashboard.types";
 
 type LineSeries = {
@@ -26,7 +25,8 @@ type LineChartProps<T extends ChartDatum> = {
   lines: LineSeries[];
   height?: number;
   valueFormatter?: (value: number) => string;
-  customTooltip?: FC<TooltipContentProps<number, string>>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  customTooltip?: (props: any) => ReactNode;
 };
 
 export function LineChart<T extends ChartDatum>({
