@@ -7,6 +7,11 @@ settings:
 overrides:
   baseline-browser-mapping: ^2.10.16
 
+patchedDependencies:
+  next@16.0.10:
+    hash: 1297d5dbaa02e67d1cc0a95cc591828e3cb8fe02d210b6057f132b5f4d1fa3fb
+    path: patches/next@16.0.10.patch
+
 importers:
 
   .:
@@ -31,10 +36,10 @@ importers:
         version: 2.1.1
       next:
         specifier: latest
-        version: 16.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 16.0.10(patch_hash=1297d5dbaa02e67d1cc0a95cc591828e3cb8fe02d210b6057f132b5f4d1fa3fb)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       next-auth:
         specifier: 5.0.0-beta.25
-        version: 5.0.0-beta.25(next@16.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
+        version: 5.0.0-beta.25(next@16.0.10(patch_hash=1297d5dbaa02e67d1cc0a95cc591828e3cb8fe02d210b6057f132b5f4d1fa3fb)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
       postcss:
         specifier: 8.5.1
         version: 8.5.1
@@ -2087,13 +2092,13 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  next-auth@5.0.0-beta.25(next@16.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0):
+  next-auth@5.0.0-beta.25(next@16.0.10(patch_hash=1297d5dbaa02e67d1cc0a95cc591828e3cb8fe02d210b6057f132b5f4d1fa3fb)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0):
     dependencies:
       '@auth/core': 0.37.2
-      next: 16.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      next: 16.0.10(patch_hash=1297d5dbaa02e67d1cc0a95cc591828e3cb8fe02d210b6057f132b5f4d1fa3fb)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react: 19.2.0
 
-  next@16.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  next@16.0.10(patch_hash=1297d5dbaa02e67d1cc0a95cc591828e3cb8fe02d210b6057f132b5f4d1fa3fb)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@next/env': 16.0.10
       '@swc/helpers': 0.5.15
